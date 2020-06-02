@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>test2</title>
+	<script>
+		"use strict";
+		(function (para) {
+			var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script', x = null, y = null;
+			if (typeof (w['sensorsDataAnalytic201505']) !== 'undefined') {
+				return false;
+			}
+			w['sensorsDataAnalytic201505'] = n;
+			w[n] = w[n] || function (a) { return function () { (w[n]._q = w[n]._q || []).push([a, arguments]); } };
+			var ifs = ['track', 'quick', 'register', 'registerPage', 'registerOnce', 'trackSignup', 'trackAbtest', 'setProfile', 'setOnceProfile', 'appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify', 'login', 'logout', 'trackLink', 'clearAllRegister', 'getAppStatus'];
+			for (var i = 0; i < ifs.length; i++) {
+				// call 方法传参数 + 闭包 => 向数据发送的队列 _q 中 push 了需要发送的数据 包括 api 名如：track 和 track 方法的参数
+				w[n][ifs[i]] = w[n].call(null, ifs[i]);
+			}
+			if (!w[n]._t) {
+				x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+				x.async = 1;
+				x.src = p;
+				x.setAttribute('charset', 'UTF-8');
+				w[n].para = para;
+				y.parentNode.insertBefore(x, y);
+			}
+		})({
+			// sdk_url: './1164测试/sensorsdata.full.js',
+			// sdk_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/sensorsdata.min.js',
+			// sdk_url: './sensorsdata.full.js',
+			// sdk_url:'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
+			heatmap_url: './heatmap.full.js',
+			sdk_url: './sensorsdata.full.js',
+			// heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/heatmap.min.js',
+			// sdk_url:'https://kang335.gitee.io/satest/sensorsdata.full.js?r=' + Math.random(),
+			// vtrack_url:'https://kang335.gitee.io/satest/vtrack.full.js?r=' + Math.random(),
+			name: 'sensors',
+			max_string_length: 1500,
+			is_track_single_page: false,
+			// send_type:'ajax',
+			// cross_subdomain: false,
+			// batch_send:true,
+			source_channel: ['utm_test'],
+			// use_client_time:true,
+			// show_log:false,
+			// preset_properties: {
+			// 	//是否采集$latest_utm最近一次广告系列相关参数，默认值true
+			// 	latest_utm: true,
+			// 	//是否采集$latest_traffic_source_type最近一次流量来源类型，默认值true
+			// 	latest_traffic_source_type: true,
+			// 	//是否采集$latest_search_keyword最近一次搜索引擎关键字，默认值true
+			// 	latest_search_keyword: true,
+			// 	//是否采集$latest_referrer最近一次前向地址，默认值true
+			// 	latest_referrer: true,
+			// 	//是否采集$latest_referrer_host最近一次前向地址，1.14.8以下版本默认是true，1.14.8及以上版本默认是false，需要手动设置为true开启
+			// 	latest_referrer_host: true,
+			// 	//是否采集$latest_landing_page最近一次落地页地址，默认值false
+			// 	latest_landing_page: true,
+			// 	//是否采集 $url 页面地址作为公共属性，默认值false
+			// 	// url: true,
+			// 	// title: true,
+			// },
+			// server_url: 'http://10.120.64.126:8106/sa?project=gz',
+			// server_url:'https://newsdktest.datasink.sensorsdata.cn/sa?project=banwenzheng&token=5a394d2405c147ca',
+			use_app_track: true,
+			// server_url: 'http://10.42.120.204:8106/sa?project=default',
+			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
+			server_url: 'https://test-syg.datasink.sensorsdata.cn/sa?project=guozheng&token=27f1e21b78daf376',
+			heatmap: {}
+		});
+
+		// sensors.registerPage({ $url: '全局url' });
+
+		// setTimeout(() => {
+		// sensors.login('777777');
+		// sensors.appendProfile({catrgory22: ['玉米','白菜'],catrgory33:['土豆','冬瓜']});
+		// sensors.quick('autoTrack');
+		sensors.quick('autoTrack')
+
+		// sensors.track('test', {}, () => {
+		// 	console.log('@@@@@@@track 函数回调执行@@@@@@@@')
+		// })
+
+
+		// setTimeout(() => {
+		// 	window.removeEventListener('comppleted', {
+		// 		urls: ["<all_urls>"]
+		// 	});
+		// }, 5000);
+
+		// sensors.login('777777');
+
+		// }, 500);
+
+		// sensors.registerPage({name:'xxxxxx'});
+
+		// sensors.quick('setPlugin', {
+		// 	popup: function (self) {
+		// 		self.init({
+		// 			api: 'http://10.42.189.228:8141/',
+		// 			project: "SDKTest",
+		// 			platform: "H5",
+		// 			popup_window: {
+		// 				onClick: function (json) {
+		// 					alert(JSON.stringify(json));
+		// 				}
+		// 			}
+		// 		})
+		// 	}
+		// });
+	</script>
+	<style>
+		button {
+			margin-top: 2000px;
+		}
+	</style>
+</head>
+<!-- <script src="chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/js/douban.js"> -->
+</script>
+
+<body>
+	<p>测试11</p>
+	<!-- <a href='javascript:chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/image/48.png'></a>
+	<img src='chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/image/48.png' /> -->
+	<a href="./index.html">去index.html</a>
+	<div id="456">
+		<div id="123">
+			<input id="3456789" name='我的input' placeholder="测试点击input内容采集情况" />
+		</div>
+		<input placeholder="测试点击input内容采集情况" />
+	</div>
+	<input placeholder="测试点击input内容采集情况" />
+	<br>
+	<div id="testgz" style="display:inline-block;height:200px;width:200px;background-color:aquamarine;">
+		<a href="#" target="">baidu</a>
+	</div>
+
+	<br>
+	<a href="javascript:;" onclick="testClick(this)" data='test'> 点击按钮触发</a>
+	<div id="123" data='test' style="display:inline-block;height:200px;width:200px;background-color:blueviolet;"> 点击按钮触发
+	</div>
+	<div id="testdisplay" name='testdisplay' data-sensors-click
+		style="text-align: center; display:inline-block;width:320px;height:320px;background-color:blue">
+		<!-- <div onclick="divclick(this);" style="display:inline-block;width:120px;height:120px;background-color:red">我是内部div,触发点击事件</div> -->
+		<div style="text-align: center;display:inline-block;width:220px;height:220px;background-color:green">
+			我是内部div1,触发点击事件
+			<li style="display:inline-block;width:120px;height:120px;background-color:red">我是内部div2,触发点击事件</li>
+		</div>
+	</div>
+	<button>支付成功</button>
+	<br>
+	<input type="checkbox" style='margin-left:50px;' value='test' name='gz' checked='checked' /> 测试的checkbox点击
+	<!-- <a href='https://www.baidu.com' id='gobaidu' name='gobaidu' event='gztest' target="_blank">百度一下</a> -->
+
+
+	<script>
+		// document.getElementById('testdisplay').onclick = function (e) {
+		// 	// sensors.quick('trackHeatMap', e.target);
+		// 	sensors.track('tttt', {});
+		// 	// window.location.href = 'https://www.baidu.com'
+		// }
+		var pp = 'ttttt'
+		function testClick(ele) {
+			// sensors.quick('trackHeatMap', ele);
+			sensors.quick('trackAllHeatMap', ele, {});
+		}
+		// 支付成功的函数
+		// var emitter = new eventEmitter();
+		// function payClick(ele) {
+		// 	var obj = {
+		// 		pay_id: '001290',
+		// 		pay_status: "success"
+		// 	}
+		// 	emitter.emit('paySuccess', obj);
+		// }
+		// sensors.quick('setPlugin', {
+		// 	popup: function (self) {
+		// 		self.init(
+		// 			{ api: 'http://10.42.189.228:8141/', project: "default", platform: "H5", }
+		// 		)
+		// 	}
+		// })
+
+		// // 订单状态模块
+		// setTimeout(function () {
+		// 	// sensors.events.on('send', function () {
+		// 	// 	console.log('data', 'sendsendsendsendsendsend');
+		// 	// });
+		// 	sensors.events.on('send', function (data) {
+		// 		console.log('data', JSON.stringify(data));
+		// 	});
+		// 	sensors.events.on('changeDistinctId', function (data) {
+		// 		console.log('data', JSON.stringify(data));
+		// 	});
+		// 	sensors.events.isReady();
+		// 	// sensors.events.emit('send',3333);
+		// }, 500)
+
+
+		// // 订单列表模块
+		// emitter.on('paySuccess', function (data) {
+		// 	console.log('data', data);
+		// });
+
+		// sensors.quick('isReady', function () {
+		// 	sensors.events.on('send', function (data) {
+		// 		//参数data就是发送的事件......
+		// 		console.log('@@@@@' + data.event)
+		// 	})
+		// 	sensors.events.isReady();
+		// })
+	</script>
+
+</body>
+
+</html>
