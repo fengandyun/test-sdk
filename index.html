@@ -96,12 +96,16 @@
 		// sensors.registerPage({name:'xxxxxx'});
 
 	</script>
-
-
+	<script>
+	 setTimeout(function(){
+		 var btntest = document.getElementById("btntest");
+		 btntest.style.marginTop = '2000px'; 
+	 },1000);
+	</script>
 	<style>
-		button {
+/* 		button {
 			margin-top: 2000px;
-		}
+		} */
 	</style>
 </head>
 <!-- <script src="chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/js/douban.js"> -->
@@ -136,7 +140,7 @@
 			<li style="display:inline-block;width:120px;height:120px;background-color:red">我是内部div2,触发点击事件</li>
 		</div>
 	</div>
-	<button>支付成功</button>
+	<button id='btntest'>支付成功</button>
 	<br>
 	<input type="checkbox" style='margin-left:50px;' value='test' name='gz' checked='checked' /> 测试的checkbox点击
 	<!-- <a href='https://www.baidu.com' id='gobaidu' name='gobaidu' event='gztest' target="_blank">百度一下</a> -->
@@ -199,6 +203,7 @@
 		// 	sensors.events.isReady();
 		// })
 	</script>
+
 
 </body>
 
