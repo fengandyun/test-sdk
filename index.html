@@ -66,7 +66,7 @@
 			use_app_track: true,
 			// server_url: 'http://10.42.120.204:8106/sa?project=default',
 			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
-			server_url: 'https://test-syg.datasink.sensorsdata.cn/sa?project=guozheng&token=27f1e21b78daf376',
+			server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=beiyong3&token=schemaLimited-zHiBUt4w',
 			heatmap: {}
 		});
 
@@ -95,56 +95,9 @@
 
 		// sensors.registerPage({name:'xxxxxx'});
 
-		// sensors.quick('setPlugin', {
-		// 	popup: function (self) {
-		// 		self.init({
-		// 			api: 'http://10.42.189.228:8141/',
-		// 			project: "SDKTest",
-		// 			platform: "H5",
-		// 			popup_window: {
-		// 				onClick: function (json) {
-		// 					alert(JSON.stringify(json));
-		// 				}
-		// 			}
-		// 		})
-		// 	}
-		// });
 	</script>
-	<script type='text/javascript'>
-		!function (e, t, n, g, i) { e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, n = t.createElement("script"), tag = t.getElementsByTagName("script")[0], n.async = 1, n.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + g, tag.parentNode.insertBefore(n, tag) }(window, document, "script", "assets.giocdn.com/2.1/gio.js", "gio");
-		gio('init', '8188896684f95c9d', {});
 
-		//custom page code begin here
 
-		//custom page code end here
-
-		gio('send');
-		// gio 弹框
-		!function (n, e) { function t(e, n) { return function () { e.apply(n, 1 === arguments.length ? [arguments[0]] : Array.apply(null, arguments)) } } var s = n.gio ? t(n.gio.q.unshift, n.gio.q) : t(n._vds.push, n._vds), i = "growingio-sdk"; n[i] = { pendingEvents: [] }, s(["setListener", function (e) { n[i] && n[i].eventMessageQueue ? n[i].eventMessageQueue.feed(e) : n[i].pendingEvents.length <= 200 && n[i].pendingEvents.push(e) }]); var o = e.createElement("script"), r = e.getElementsByTagName("script"); o.async = 1, o.src = ("https:" == e.location.protocol ? "https://" : "http://") + "assets.giocdn.com/sdk/marketing/1.1/access.js"; var g = r[r.length - 1]; g.parentNode.insertBefore(o, g) }(window, document);
-
-	</script>
-	<!-- CleverTap -->
-	<script type="text/javascript">
-		var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
-		// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-		clevertap.account.push({ "id": "TEST-585-ZK9-475Z" });
-		clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
-		clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
-		(function () {
-			var wzrk = document.createElement('script');
-			wzrk.type = 'text/javascript';
-			wzrk.async = true;
-			wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(wzrk, s);
-		})();
-		clevertap.profile.push({
-			"Site": {
-				"Name": "Jack Montana", // User's name
-				"Email": '1015034290@qq.com'
-			}
-		});
-	</script>
 	<style>
 		button {
 			margin-top: 2000px;
