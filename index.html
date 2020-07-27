@@ -97,14 +97,16 @@
 
 	</script>
 	<script>
+		var flag = true
 	setInterval(function(){
 		 var btntest = document.getElementById("btntest");
-		 btntest.style.marginTop = '2000px'; 
-	 },2000);
-	setInterval(function(){
-		 var btntest = document.getElementById("btntest");
-		 btntest.style.marginTop = '2200px'; 
-	 },2000);
+		if(flag){
+			btntest.style.marginTop = '2000px'; 
+		} else {
+			btntest.style.marginTop = '2200px'; 
+		}
+		 
+	 },500);
 	</script>
 	<style>
 		button {
