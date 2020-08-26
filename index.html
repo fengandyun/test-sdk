@@ -3,6 +3,7 @@
 
 <head>
 	<title>test2</title>
+	
 	<script>
 		"use strict";
 		(function (para) {
@@ -32,6 +33,7 @@
 			// sdk_url:'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
 			heatmap_url: './heatmap.full.js',
 			sdk_url: './sensorsdata.full.js',
+			vtrack_url:'./vtrack.min.js',
 			// heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/heatmap.min.js',
 			// sdk_url:'https://kang335.gitee.io/satest/sensorsdata.full.js?r=' + Math.random(),
 			// vtrack_url:'https://kang335.gitee.io/satest/vtrack.full.js?r=' + Math.random(),
@@ -110,7 +112,7 @@
 		// 	}
 		// });
 	</script>
-	<script type='text/javascript'>
+	<!-- <script type='text/javascript'>
 		!function (e, t, n, g, i) { e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, n = t.createElement("script"), tag = t.getElementsByTagName("script")[0], n.async = 1, n.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + g, tag.parentNode.insertBefore(n, tag) }(window, document, "script", "assets.giocdn.com/2.1/gio.js", "gio");
 		gio('init', '8188896684f95c9d', {});
 
@@ -122,9 +124,9 @@
 		// gio 弹框
 		!function (n, e) { function t(e, n) { return function () { e.apply(n, 1 === arguments.length ? [arguments[0]] : Array.apply(null, arguments)) } } var s = n.gio ? t(n.gio.q.unshift, n.gio.q) : t(n._vds.push, n._vds), i = "growingio-sdk"; n[i] = { pendingEvents: [] }, s(["setListener", function (e) { n[i] && n[i].eventMessageQueue ? n[i].eventMessageQueue.feed(e) : n[i].pendingEvents.length <= 200 && n[i].pendingEvents.push(e) }]); var o = e.createElement("script"), r = e.getElementsByTagName("script"); o.async = 1, o.src = ("https:" == e.location.protocol ? "https://" : "http://") + "assets.giocdn.com/sdk/marketing/1.1/access.js"; var g = r[r.length - 1]; g.parentNode.insertBefore(o, g) }(window, document);
 
-	</script>
+	</script> -->
 	<!-- CleverTap -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
 		// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
 		clevertap.account.push({ "id": "TEST-585-ZK9-475Z" });
@@ -144,7 +146,7 @@
 				"Email": '1015034290@qq.com'
 			}
 		});
-	</script>
+	</script> -->
 	<style>
 		button {
 			margin-top: 2000px;

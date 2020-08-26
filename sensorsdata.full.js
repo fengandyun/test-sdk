@@ -2993,7 +2993,7 @@
             success: function() {},
             error: function() {},
             type: 'js',
-            url: location.protocol + '//static.sensorsdata.cn/sdk/' + sd.lib_version + '/vtrack.min.js'
+            url: sd.para.vtrack_url ? sd.para.vtrack_url : location.protocol + '//static.sensorsdata.cn/sdk/' + sd.lib_version + '/vtrack.min.js'
           });
         },
         messageListener: function(event) {
