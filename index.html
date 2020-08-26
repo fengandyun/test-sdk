@@ -68,7 +68,7 @@
 			use_app_track: true,
 			// server_url: 'http://10.42.120.204:8106/sa?project=default',
 			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
-			server_url: 'https://test-syg.datasink.sensorsdata.cn/sa?project=guozheng&token=27f1e21b78daf376',
+			server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=beiyong3&token=schemaLimited-zHiBUt4w',
 			heatmap: {}
 		});
 
@@ -97,20 +97,6 @@
 
 		// sensors.registerPage({name:'xxxxxx'});
 
-		// sensors.quick('setPlugin', {
-		// 	popup: function (self) {
-		// 		self.init({
-		// 			api: 'http://10.42.189.228:8141/',
-		// 			project: "SDKTest",
-		// 			platform: "H5",
-		// 			popup_window: {
-		// 				onClick: function (json) {
-		// 					alert(JSON.stringify(json));
-		// 				}
-		// 			}
-		// 		})
-		// 	}
-		// });
 	</script>
 	<!-- <script type='text/javascript'>
 		!function (e, t, n, g, i) { e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, n = t.createElement("script"), tag = t.getElementsByTagName("script")[0], n.async = 1, n.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + g, tag.parentNode.insertBefore(n, tag) }(window, document, "script", "assets.giocdn.com/2.1/gio.js", "gio");
@@ -175,17 +161,13 @@
 
 	<br>
 	<a href="javascript:;" onclick="testClick(this)" data='test'> 点击按钮触发</a>
-	<div id="123" data='test' style="display:inline-block;height:200px;width:200px;background-color:blueviolet;"> 点击按钮触发
+	<div id="123" data='test' style="display:inline-block;height:20px;width:200px;background-color:blueviolet;"> 点击按钮触发
 	</div>
 	<div id="testdisplay" name='testdisplay' data-sensors-click
-		style="text-align: center; display:inline-block;width:320px;height:320px;background-color:blue">
-		<!-- <div onclick="divclick(this);" style="display:inline-block;width:120px;height:120px;background-color:red">我是内部div,触发点击事件</div> -->
-		<div style="text-align: center;display:inline-block;width:220px;height:220px;background-color:green">
-			我是内部div1,触发点击事件
-			<li style="display:inline-block;width:120px;height:120px;background-color:red">我是内部div2,触发点击事件</li>
-		</div>
+		style="text-align: center; display:inline-block;width:320px;height:30px;background-color:blue">
+		777777
 	</div>
-	<button>支付成功</button>
+	<button id='btntest'>支付成功</button>
 	<br>
 	<input type="checkbox" style='margin-left:50px;' value='test' name='gz' checked='checked' /> 测试的checkbox点击
 	<!-- <a href='https://www.baidu.com' id='gobaidu' name='gobaidu' event='gztest' target="_blank">百度一下</a> -->
@@ -248,6 +230,7 @@
 		// 	sensors.events.isReady();
 		// })
 	</script>
+
 
 </body>
 
