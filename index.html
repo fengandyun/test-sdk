@@ -3,6 +3,16 @@
 
 <head>
 	<title>test2</title>
+	<script type="text/javascript" id="ARK_SDK" src="./AnalysysAgent_JS_SDK.min.js"></script>
+	<script>
+	window.AnalysysAgent.init({
+		appkey: 'ecommercedemo', //APPKEY
+		uploadURL: 'https://growth.analysys.cn:4089',//上传数据的地址
+		debugMode:2,
+		autoTrack:true,
+		SDKFileDirectory:"./AnalysysAgent_JS_SDK_VISUAL.min.js"
+	})
+	</script>
 	
 	<script src="./popup.min.js"></script>
 	<script>
