@@ -32,7 +32,7 @@
 			// sdk_url: './sensorsdata.full.js',
 			// sdk_url:'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
 			heatmap_url: './heatmap.full.js',
-			sdk_url: './sensorsdata.full.js',
+			sdk_url: './sensorsdata.js',
 			vtrack_url:'./vtrack.min.js',
 			// heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/heatmap.min.js',
 			// sdk_url:'https://kang335.gitee.io/satest/sensorsdata.full.js?r=' + Math.random(),
@@ -68,7 +68,7 @@
 			use_app_track: true,
 			// server_url: 'http://10.42.120.204:8106/sa?project=default',
 			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
-			server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=beiyong3&token=schemaLimited-zHiBUt4w',
+			server_url: 'https://sf21-test.debugbox.sensorsdata.cn:4006/',
 			heatmap: {}
 		});
 
@@ -78,7 +78,20 @@
 		// sensors.login('777777');
 		// sensors.appendProfile({catrgory22: ['玉米','白菜'],catrgory33:['土豆','冬瓜']});
 		// sensors.quick('autoTrack');
-		sensors.quick('autoTrack')
+		// 初始化弹框插件
+		sensors.quick('setPlugin', {
+			popup: function (popup) {
+				popup.init({
+					api_base_url: 'https://apimapping.debugbox.sensorsdata.cn/debugbox/sfo21-test/8202/api/v2',
+					popup_listener: {
+						onClick: function () {
+							alert('1111');
+						}
+					}
+				})
+			}
+		});
+		sensors.quick('autoTrack');
 
 		// sensors.track('test', {}, () => {
 		// 	console.log('@@@@@@@track 函数回调执行@@@@@@@@')

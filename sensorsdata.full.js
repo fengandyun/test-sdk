@@ -3652,7 +3652,7 @@
     saEvent.check = function(p) {
       var flag = true;
       for (var i in p) {
-        if (!this.checkOption.check(i, p[i])) {
+        if (_.hasOwnProperty.call(p,i) && !this.checkOption.check(i, p[i])) {
           return false;
         }
       }
