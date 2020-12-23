@@ -9266,13 +9266,13 @@
       _.bindReady(
         function() {
           if (window && window.parent && window.parent.window && (window !== window.parent.window)) {
-            window.parent.window.postMessage({
+            window.parent.window.parent.window.postMessage({
               method: 'setHeight',
               params: {
                 height: me.getScrollHeight()
               }
             }, sd.para.web_url);
-            window.parent.window.postMessage({
+            window.parent.window.parent.window.postMessage({
               method: 'setUrl',
               params: {
                 request_type: sessionStorage.getItem('sensors_heatmap_type') || '1',
