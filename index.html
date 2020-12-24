@@ -74,7 +74,7 @@
 			heatmap: {scroll_notice_map:'not_collect'}
 		});
 
-		sensors.registerPage({ $url: 'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html'});
+		// sensors.registerPage({ $url: 'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html'});
 
 		// setTimeout(() => {
 		// sensors.login('777777');
@@ -176,8 +176,8 @@
 	</div>
 
 	<br>
-	<a href="javascript:;" onclick="testClick(this)" data='test'> 点击按钮触发</a>
-	<div id="123" data='test' style="display:inline-block;height:20px;width:200px;background-color:blueviolet;"> 点击按钮触发
+	<a href="javascript:;" onclick="testClick(this)" data='test'>点击按钮触发</a>
+	<div id="123" data='test' style="display:inline-block;height:20px;width:200px;background-color:blueviolet;"> 点击div触发
 	</div>
 	<div id="testdisplay" name='testdisplay' data-sensors-click
 		style="text-align: center; display:inline-block;width:320px;height:30px;background-color:blue">
@@ -198,7 +198,7 @@
 		var pp = 'ttttt'
 		function testClick(ele) {
 			// sensors.quick('trackHeatMap', ele);
-			sensors.quick('trackAllHeatMap', ele, {});
+			sensors.quick('trackAllHeatMap', ele, {$url:'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html'});
 		}
 		// 支付成功的函数
 		// var emitter = new eventEmitter();
