@@ -3253,7 +3253,7 @@ sd.detectMode = function(){
                 }
             }
         }
-        this.isReady(match[1],type);
+        this.isReady(match[1],type,location.href.split('?')[0]);
       },
       isReady: function (data,type,url){
         if(sd.para.heatmap_url){
