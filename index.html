@@ -4,7 +4,8 @@
 <head>
 	<title>test</title>
 	
-	<script src="./popup.min.js"></script>
+	<!-- <script src="./popup.min.js"></script> -->
+	<script src="./jquery.min.js"></script>
 	<script>
 		"use strict";
 		(function (para) {
@@ -33,7 +34,8 @@
 			// sdk_url: './sensorsdata.full.js',
 			// sdk_url:'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
 			heatmap_url: './heatmap.js',
-			sdk_url: './s.js',
+			sdk_url: './sensorsdata.full.js',
+			use_client_time:true,
 			// vtrack_url:'./vtrack.min.js',
 			// heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/heatmap.min.js',
 			// sdk_url:'https://kang335.gitee.io/satest/sensorsdata.full.js?r=' + Math.random(),
@@ -41,7 +43,7 @@
 			name: 'sensors',
 			max_string_length: 1500,
 			is_track_single_page: false,
-			send_type:'ajax',
+			// send_type:'ajax',
 			// cross_subdomain: false,
 			// batch_send:true,
 			source_channel: ['utm_test'],
@@ -66,7 +68,7 @@
 			// },
 			// server_url: 'http://10.120.64.126:8106/sa?project=gz',
 			// server_url:'https://newsdktest.datasink.sensorsdata.cn/sa?project=banwenzheng&token=5a394d2405c147ca',
-			use_app_track: true,
+			// use_app_track: true,
 			// server_url: 'http://10.120.245.57:8106/sa?project=default',
 			server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=beiyong3&token=schemaLimited-zHiBUt4w',
 			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
