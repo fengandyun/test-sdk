@@ -95,6 +95,12 @@
 // 				})
 // 			}
 // 		});
+		sensors.use('SiteLinker',
+  {linker: [
+      {part_url: 'sensorsdata.cn', after_hash: false},
+      {part_url: 'example.com', after_hash: false}
+    ]}
+);
 		sensors.quick('autoTrack');
 
 		// sensors.track('test', {}, () => {
