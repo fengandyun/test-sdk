@@ -3,8 +3,6 @@
 
 <head>
 	<title>test</title>
-	
-	<!-- <script src="./popup.min.js"></script> -->
 	<script src="./jquery.min.js"></script>
 	<script>
 		"use strict";
@@ -35,7 +33,7 @@
 			// sdk_url:'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
 			heatmap_url: './heatmap.js',
 			sdk_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.16.3/sensorsdata.min.js',
-			use_client_time:true,
+			use_client_time: true,
 			// vtrack_url:'./vtrack.min.js',
 			// heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.14.24/heatmap.min.js',
 			// sdk_url:'https://kang335.gitee.io/satest/sensorsdata.full.js?r=' + Math.random(),
@@ -73,7 +71,7 @@
 			server_url: 'https://jssdkdata.debugbox.sensorsdata.cn/sa?project=beiyong3&token=schemaLimited-zHiBUt4w',
 			// server_url:'http://liuxing2.debugbox.sensorsdata.cn/sa?project=default',
 			// server_url: 'http://10.120.4.106:8106/sa?project=default',
-			heatmap: {scroll_notice_map:'not_collect'}
+			heatmap: { scroll_notice_map: 'not_collect' }
 		});
 
 		// sensors.registerPage({ $url: 'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html'});
@@ -83,187 +81,130 @@
 		// sensors.appendProfile({catrgory22: ['玉米','白菜'],catrgory33:['土豆','冬瓜']});
 		// sensors.quick('autoTrack');
 		// 初始化弹框插件
-// 		sensors.quick('setPlugin', {
-// 			popup: function (popup) {
-// 				popup.init({
-// 					api_base_url: 'https://apimapping.debugbox.sensorsdata.cn/debugbox/sfo21-test/8202/api/v2',
-// 					popup_listener: {
-// 						onClick: function () {
-// 							alert('1111');
-// 						}
-// 					}
-// 				})
-// 			}
-// 		});
-		sensors.quick('useModulePlugin','SiteLinker',
-    {linker: [
-      {part_url: 'sensorsdata.cn', after_hash: false},
-      {part_url: 'example.com', after_hash: false}
-    ]}
-);
+		// 		sensors.quick('setPlugin', {
+		// 			popup: function (popup) {
+		// 				popup.init({
+		// 					api_base_url: 'https://apimapping.debugbox.sensorsdata.cn/debugbox/sfo21-test/8202/api/v2',
+		// 					popup_listener: {
+		// 						onClick: function () {
+		// 							alert('1111');
+		// 						}
+		// 					}
+		// 				})
+		// 			}
+		// 		});
+		sensors.quick('useModulePlugin', 'SiteLinker',
+			{
+				linker: [
+					{ part_url: 'sensorsdata.cn', after_hash: false },
+					{ part_url: 'example.com', after_hash: false }
+				]
+			}
+		);
 		sensors.quick('autoTrack');
-
-		// sensors.track('test', {}, () => {
-		// 	console.log('@@@@@@@track 函数回调执行@@@@@@@@')
-		// })
-
-
-		// setTimeout(() => {
-		// 	window.removeEventListener('comppleted', {
-		// 		urls: ["<all_urls>"]
-		// 	});
-		// }, 5000);
-
-		// sensors.login('777777');
-
-		// }, 500);
-
-		// sensors.registerPage({name:'xxxxxx'});
 	</script>
 	<!-- 百度统计 start-->
 	<script>
 		var _hmt = _hmt || [];
-		(function() {
-  			var hm = document.createElement("script");
-  			hm.src = "https://hm.baidu.com/hm.js?4aa427b56c8f0ad23977fcecb306799a";
-  			var s = document.getElementsByTagName("script")[0]; 
-  			s.parentNode.insertBefore(hm, s);
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?4aa427b56c8f0ad23977fcecb306799a";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
 		})();
 	</script>
 	<!-- 百度统计 end-->
-	
-	<script>
-	  var _dgt = _dgt || [];
-	  window._dgt = _dgt;
-	  (function () {
-	    _dgt.push(['setSiteId', '72eb1c376685a502']);
-	    var d = document, g = d.createElement('script'),
-	    s = d.getElementsByTagName('script')[0];
-	    g.type = 'text/javascript'; g.async = true;
-	    g.defer = true;
-	    g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.shujike.com/dgt.js';
-	    s.parentNode.insertBefore(g, s);
-	  })();
-	</script>
-	<script type = "text/javascript">
-	  (function() {
-	    if (window.zhuge) return;
-	    window.zhuge = [];
-	    window.zhuge.methods = "_init identify track trackRevenue getDid getSid getKey setSuperProperty setUserProperties setWxProperties setPlatform".split(" ");
-	    window.zhuge.factory = function(b) {
-	      return function() {
-		var a = Array.prototype.slice.call(arguments);
-		a.unshift(b);
-		window.zhuge.push(a);
-		return window.zhuge;
-	      }
-	    };
-	    for (var i = 0; i < window.zhuge.methods.length; i++) {
-	      var key = window.zhuge.methods[i];
-	      window.zhuge[key] = window.zhuge.factory(key);
-	    }
-	    window.zhuge.load = function(b, x) {
-	      if (!document.getElementById("zhuge-js")) {
-		var a = document.createElement("script");
-		var verDate = new Date();
-		var verStr = verDate.getFullYear().toString() + verDate.getMonth().toString() + verDate.getDate().toString();
 
-		a.type = "text/javascript";
-		a.id = "zhuge-js";
-		a.async = !0;
-		a.src = 'https://zgsdk.zhugeio.com/zhuge.min.js?v=' + verStr;
-		a.onerror = function() {
-		  window.zhuge.identify = window.zhuge.track = function(ename, props, callback) {
-		    if(callback && Object.prototype.toString.call(callback) === '[object Function]') {
-		      callback();
-		    } else if (Object.prototype.toString.call(props) === '[object Function]') {
-		      props();
-		    }
-		  };
-		};
-		var c = document.getElementsByTagName("script")[0];
-		c.parentNode.insertBefore(a, c);
-		window.zhuge._init(b, x)
-	      }
-	    };
-	    window.zhuge.load('29c9b93a95e74672b4a105ab2ddb8ba1', { //配置应用的AppKey
-	      superProperty: { //全局的事件属性(选填)
-		'应用名称': '诸葛io'
-	      },
-	      adTrack: false,//广告监测开关，默认为false
-	      zgsee: true,//视屏采集开关， 默认为false
-	      autoTrack: false,
-	      //启用全埋点采集（选填，默认false）
-	      singlePage: false //是否是单页面应用（SPA），启用autoTrack后生效（选填，默认false）
-	    });
-	  })();
+	<script>
+		var _dgt = _dgt || [];
+		window._dgt = _dgt;
+		(function () {
+			_dgt.push(['setSiteId', '72eb1c376685a502']);
+			var d = document, g = d.createElement('script'),
+				s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript'; g.async = true;
+			g.defer = true;
+			g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.shujike.com/dgt.js';
+			s.parentNode.insertBefore(g, s);
+		})();
 	</script>
-	
+	<!-- 诸葛IO start-->
+	<script type="text/javascript">
+		(function () {
+			if (window.zhuge) return;
+			window.zhuge = [];
+			window.zhuge.methods = "_init identify track trackRevenue getDid getSid getKey setSuperProperty setUserProperties setWxProperties setPlatform".split(" ");
+			window.zhuge.factory = function (b) {
+				return function () {
+					var a = Array.prototype.slice.call(arguments);
+					a.unshift(b);
+					window.zhuge.push(a);
+					return window.zhuge;
+				}
+			};
+			for (var i = 0; i < window.zhuge.methods.length; i++) {
+				var key = window.zhuge.methods[i];
+				window.zhuge[key] = window.zhuge.factory(key);
+			}
+			window.zhuge.load = function (b, x) {
+				if (!document.getElementById("zhuge-js")) {
+					var a = document.createElement("script");
+					var verDate = new Date();
+					var verStr = verDate.getFullYear().toString() + verDate.getMonth().toString() + verDate.getDate().toString();
+
+					a.type = "text/javascript";
+					a.id = "zhuge-js";
+					a.async = !0;
+					a.src = 'https://zgsdk.zhugeio.com/zhuge.min.js?v=' + verStr;
+					a.onerror = function () {
+						window.zhuge.identify = window.zhuge.track = function (ename, props, callback) {
+							if (callback && Object.prototype.toString.call(callback) === '[object Function]') {
+								callback();
+							} else if (Object.prototype.toString.call(props) === '[object Function]') {
+								props();
+							}
+						};
+					};
+					var c = document.getElementsByTagName("script")[0];
+					c.parentNode.insertBefore(a, c);
+					window.zhuge._init(b, x)
+				}
+			};
+			window.zhuge.load('29c9b93a95e74672b4a105ab2ddb8ba1', { //配置应用的AppKey
+				superProperty: { //全局的事件属性(选填)
+					'应用名称': '诸葛io'
+				},
+				adTrack: false,//广告监测开关，默认为false
+				zgsee: true,//视屏采集开关， 默认为false
+				autoTrack: false,
+				//启用全埋点采集（选填，默认false）
+				singlePage: false //是否是单页面应用（SPA），启用autoTrack后生效（选填，默认false）
+			});
+		})();
+	</script>
+	<!-- 诸葛IO end-->
+
 	<!-- PHPStat Start -->
 	<script language="JavaScript" id="phpstat_js_id_10004398">
-	var _trackDataType = 'web';
-	var _trackData = _trackData || [];
-	(function() {
-	var phpstat_js = document.createElement('script'); phpstat_js.type = 'text/javascript'; 
-	phpstat_js.charset = 'utf-8'; phpstat_js.id = 'phpstat_async_js_id_10004398'; phpstat_js.async = true;
-	phpstat_js.src = '//s1.topstat.cn/count/10004398/10004398.js';
-	var phpstat_cjs = document.getElementsByTagName('script')[0]; phpstat_cjs.parentNode.insertBefore(phpstat_js, phpstat_cjs);
-	})();
-	_trackData.push(['addaction','购物', '加入购物车', {'商品id':'12876', '价格':'67.00'}]);
-	_trackData.push(['addclick','A', 'phptag_home_m_1_1001', '首页焦点图一']);
+		var _trackDataType = 'web';
+		var _trackData = _trackData || [];
+		(function () {
+			var phpstat_js = document.createElement('script'); phpstat_js.type = 'text/javascript';
+			phpstat_js.charset = 'utf-8'; phpstat_js.id = 'phpstat_async_js_id_10004398'; phpstat_js.async = true;
+			phpstat_js.src = '//s1.topstat.cn/count/10004398/10004398.js';
+			var phpstat_cjs = document.getElementsByTagName('script')[0]; phpstat_cjs.parentNode.insertBefore(phpstat_js, phpstat_cjs);
+		})();
+		_trackData.push(['addaction', '购物', '加入购物车', { '商品id': '12876', '价格': '67.00' }]);
+		_trackData.push(['addclick', 'A', 'phptag_home_m_1_1001', '首页焦点图一']);
 	</script>
 	<!--/PHPStat End -->
-	
 
-	<!-- <script type='text/javascript'>
-		!function (e, t, n, g, i) { e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, n = t.createElement("script"), tag = t.getElementsByTagName("script")[0], n.async = 1, n.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + g, tag.parentNode.insertBefore(n, tag) }(window, document, "script", "assets.giocdn.com/2.1/gio.js", "gio");
-		gio('init', '8188896684f95c9d', {});
-
-		//custom page code begin here
-
-		//custom page code end here
-
-		gio('send');
-		// gio 弹框
-		!function (n, e) { function t(e, n) { return function () { e.apply(n, 1 === arguments.length ? [arguments[0]] : Array.apply(null, arguments)) } } var s = n.gio ? t(n.gio.q.unshift, n.gio.q) : t(n._vds.push, n._vds), i = "growingio-sdk"; n[i] = { pendingEvents: [] }, s(["setListener", function (e) { n[i] && n[i].eventMessageQueue ? n[i].eventMessageQueue.feed(e) : n[i].pendingEvents.length <= 200 && n[i].pendingEvents.push(e) }]); var o = e.createElement("script"), r = e.getElementsByTagName("script"); o.async = 1, o.src = ("https:" == e.location.protocol ? "https://" : "http://") + "assets.giocdn.com/sdk/marketing/1.1/access.js"; var g = r[r.length - 1]; g.parentNode.insertBefore(o, g) }(window, document);
-
-	</script> -->
-	<!-- CleverTap -->
-	<!-- <script type="text/javascript">
-		var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
-		// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-		clevertap.account.push({ "id": "TEST-585-ZK9-475Z" });
-		clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
-		clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
-		(function () {
-			var wzrk = document.createElement('script');
-			wzrk.type = 'text/javascript';
-			wzrk.async = true;
-			wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(wzrk, s);
-		})();
-		clevertap.profile.push({
-			"Site": {
-				"Name": "Jack Montana", // User's name
-				"Email": '1015034290@qq.com'
-			}
-		});
-	</script> -->
-	<style>
-		button {
-			margin-top: 2000px;
-		}
-	</style>
 </head>
-<!-- <script src="chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/js/douban.js"> -->
 </script>
 
 <body>
 	<p>测试11</p>
-	<!-- <a href='javascript:chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/image/48.png'></a>
-	<img src='chrome-extension://fhdghhaapkdplmcbkajnjkckiamiooin/image/48.png' /> -->
-	<a href="./index.html">去index.html</a>
+	<a href="./index-baidu.html">去index-baidu.html</a>
 	<div id="456">
 		<div id="123">
 			<input id="3456789" name='我的input' placeholder="测试点击input内容采集情况" />
@@ -285,70 +226,16 @@
 		777777
 	</div>
 	<button>支付成功</button>
-	<br> 
+	<br>
 	<input type="checkbox" style='margin-left:50px;' value='test' name='gz' checked='checked' /> 测试的checkbox点击
 	<!-- <a href='https://www.baidu.com' id='gobaidu' name='gobaidu' event='gztest' target="_blank">百度一下</a> -->
-
-
 	<script>
-		// document.getElementById('testdisplay').onclick = function (e) {
-		// 	// sensors.quick('trackHeatMap', e.target);
-		// 	sensors.track('tttt', {});
-		// 	// window.location.href = 'https://www.baidu.com'
-		// }
 		var pp = 'ttttt';
 		function testClick(ele) {
 			// sensors.quick('trackHeatMap', ele);
-			sensors.quick('trackAllHeatMap', ele, {$url:'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html'});
+			sensors.quick('trackAllHeatMap', ele, { $url: 'https://jssdk.debugbox.sensorsdata.cn/js/jww/app-h5-test/index.html' });
 		}
-		// 支付成功的函数
-		// var emitter = new eventEmitter();
-		// function payClick(ele) {
-		// 	var obj = {
-		// 		pay_id: '001290',
-		// 		pay_status: "success"
-		// 	}
-		// 	emitter.emit('paySuccess', obj);
-		// }
-		// sensors.quick('setPlugin', {
-		// 	popup: function (self) {
-		// 		self.init(
-		// 			{ api: 'http://10.42.189.228:8141/', project: "default", platform: "H5", }
-		// 		)
-		// 	}
-		// })
-
-		// // 订单状态模块
-		// setTimeout(function () {
-		// 	// sensors.events.on('send', function () {
-		// 	// 	console.log('data', 'sendsendsendsendsendsend');
-		// 	// });
-		// 	sensors.events.on('send', function (data) {
-		// 		console.log('data', JSON.stringify(data));
-		// 	});
-		// 	sensors.events.on('changeDistinctId', function (data) {
-		// 		console.log('data', JSON.stringify(data));
-		// 	});
-		// 	sensors.events.isReady();
-		// 	// sensors.events.emit('send',3333);
-		// }, 500)
-
-
-		// // 订单列表模块
-		// emitter.on('paySuccess', function (data) {
-		// 	console.log('data', data);
-		// });
-
-		// sensors.quick('isReady', function () {
-		// 	sensors.events.on('send', function (data) {
-		// 		//参数data就是发送的事件......
-		// 		console.log('@@@@@' + data.event)
-		// 	})
-		// 	sensors.events.isReady();
-		// })
 	</script>
-
-
 </body>
 
 </html>
